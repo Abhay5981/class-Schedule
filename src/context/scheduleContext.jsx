@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useContext } from 'react';
+import React, { createContext, useReducer, useContext } from "react";
 
 // Create ScheduleContext for managing state
 const ScheduleContext = createContext();
@@ -12,12 +12,12 @@ const initialState = {
 // Reducer function to handle different actions
 const scheduleReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_CLASS':
+    case "ADD_CLASS":
       return {
         ...state,
         classes: [...state.classes, action.payload],
       };
-    case 'GENERATE_SCHEDULE':
+    case "GENERATE_SCHEDULE":
       return {
         ...state,
         schedule: action.payload, // Store generated schedule
@@ -33,7 +33,7 @@ export const ScheduleProvider = ({ children }) => {
 
   // Add new class to the state
   const addClass = (newClass) => {
-    dispatch({ type: 'ADD_CLASS', payload: newClass });
+    dispatch({ type: "ADD_CLASS", payload: newClass });
   };
 
   // Function to generate schedule
@@ -73,7 +73,7 @@ export const ScheduleProvider = ({ children }) => {
       };
     });
 
-    dispatch({ type: 'GENERATE_SCHEDULE', payload: generatedSchedule });
+    dispatch({ type: "GENERATE_SCHEDULE", payload: generatedSchedule });
   };
 
   // Helper function to get the next available time slot
@@ -83,7 +83,7 @@ export const ScheduleProvider = ({ children }) => {
         return time; // Return the next available time slot
       }
     }
-    return 'No available slots'; // Return message if no slots are available
+    return "No available slots"; // Return message if no slots are available
   };
 
   return (

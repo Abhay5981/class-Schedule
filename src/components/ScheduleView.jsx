@@ -1,10 +1,11 @@
-import React from 'react';
-import { useScheduleContext } from '../context/ScheduleContext';
+import React from "react";
+import { useScheduleContext } from "../context/ScheduleContext";
 
 const ScheduleView = () => {
   const { schedule } = useScheduleContext();
 
-  if (schedule.length === 0) return <p className="text-center">No schedule generated yet.</p>;
+  if (schedule.length === 0)
+    return <p className="text-center">No schedule generated yet.</p>;
 
   return (
     <div className="overflow-auto max-w-4xl mx-auto">
@@ -23,7 +24,7 @@ const ScheduleView = () => {
             <tr
               key={index}
               className={`border-b hover:bg-gray-100 ${
-                index === schedule.length - 1 ? 'rounded-b-lg' : ''
+                index === schedule.length - 1 ? "rounded-b-lg" : ""
               }`}
             >
               <td className="p-2 text-center">{item.subject}</td>
@@ -39,4 +40,3 @@ const ScheduleView = () => {
 };
 
 export default ScheduleView;
-

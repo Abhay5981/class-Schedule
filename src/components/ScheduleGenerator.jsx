@@ -1,5 +1,5 @@
-import React from 'react';
-import { useScheduleContext } from '../context/ScheduleContext';
+import React from "react";
+import { useScheduleContext } from "../context/ScheduleContext";
 
 const ScheduleGenerator = () => {
   const { generateSchedule, schedule } = useScheduleContext();
@@ -12,7 +12,6 @@ const ScheduleGenerator = () => {
       >
         Generate Schedule
       </button>
-   
     </div>
   );
 };
