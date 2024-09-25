@@ -54,3 +54,5 @@
   2. Generate Schedule: Once you've added classes, click the "Generate Schedule" button to create an optimized class schedule.
   3. View & Edit Schedule: After generating the schedule, you can view the schedule and make manual adjustments if needed. The system will check for conflicts and offer suggestions.
   4. Persistent Data: The app automatically saves the generated schedule to local storage, allowing the data to persist across page reloads.
+## UI Image
+![Screenshot (23)](https://github.com/user-attachments/assets/fd8e8373-243c-4fa2-a040-47f1ffbf11b7)
