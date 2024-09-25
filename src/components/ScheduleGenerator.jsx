@@ -12,18 +12,7 @@ const ScheduleGenerator = () => {
       >
         Generate Schedule
       </button>
-      {schedule.length > 0 && (
-        <div className="bg-gray-50 shadow-lg p-4 rounded-lg">
-          <h3 className="font-bold mb-2">Generated Schedule</h3>
-          <ul className="list-disc list-inside">
-            {schedule.map((item, index) => (
-              <li key={index} className="py-2">
-                <span className="font-semibold">{item.className}</span> - {item.instructor} - {item.room} - {item.timeSlot}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+   
     </div>
   );
 };

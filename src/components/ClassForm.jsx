@@ -4,9 +4,10 @@ import { useScheduleContext } from '../context/ScheduleContext';
 const ClassForm = () => {
   const { addClass } = useScheduleContext();
   const [newClass, setNewClass] = useState({
-    className: '',
-    instructor: '',
-    room: '',
+    subject: '',
+    requiredSemesterHours: '',
+    professorName: '',
+    preferredTimes: '',
   });
 
   const handleChange = (e) => {
@@ -17,30 +18,38 @@ const ClassForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addClass(newClass);
-    setNewClass({ className: '', instructor: '', room: '' });
+    setNewClass({ subject: '', requiredSemesterHours: '', professorName: '', preferredTimes:''});
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-4 bg-white shadow-lg rounded-lg max-w-md mx-auto">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-4 bg-slate-700 shadow-lg rounded-lg max-w-md mx-auto">
       <input
-        name="className"
-        value={newClass.className}
+        name="subject"
+        value={newClass.subject}
         onChange={handleChange}
-        placeholder="Class Name"
+        placeholder="Subject"
         className="border p-2 rounded w-full"
       />
       <input
-        name="instructor"
-        value={newClass.instructor}
+        name="requiredSemesterHours"
+        value={newClass.requiredSemesterHours}
         onChange={handleChange}
-        placeholder="Instructor"
+        placeholder="Required Semester Hours"
         className="border p-2 rounded w-full"
       />
       <input
-        name="room"
-        value={newClass.room}
+        name="professorName"
+        value={newClass.professorName}
         onChange={handleChange}
-        placeholder="Room"
+        placeholder="Professor Name"
+        className="border p-2 rounded w-full"
+      />
+      
+      <input
+        name="preferredTimes"
+        value={newClass.preferredTimes}
+        onChange={handleChange}
+        placeholder="Preferred times"
         className="border p-2 rounded w-full"
       />
       <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
