@@ -1,4 +1,4 @@
-# Automated Class Schedule Generator [live](https://schedulegene.netlify.app/))
+# Automated Class Schedule Generator [live](https://schedulegene.netlify.app/)
   A React-based application that allows users to automatically generate and manage class schedules. The app provides tools for users to input scheduling parameters, generate conflict-free schedules, and manually      customize them if necessary. It also supports persistent schedule storage using local storage, ensuring that data remains available even after page reloads.
 
 ## Features
