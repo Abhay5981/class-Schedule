@@ -1,17 +1,29 @@
-import React from "react";
-import { useScheduleContext } from "../context/ScheduleContext";
+import React from 'react';
+import { useScheduleContext } from '../context/ScheduleContext';
 
 const ScheduleGenerator = () => {
-  const { generateSchedule, schedule } = useScheduleContext();
+  const { generateSchedule, resetSchedule, errorMessage } = useScheduleContext();
 
   return (
-    <div className="p-4 text-center">
-      <button
-        onClick={generateSchedule}
-        className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 mb-4"
-      >
+    <div className="schedule-generator text-center mt-4">
+      <button 
+        onClick={generateSchedule} 
+        className="bg-blue-500 text-white py-2 px-4 rounded mb-4">
         Generate Schedule
       </button>
+
+      <button 
+        onClick={resetSchedule} 
+        className="bg-red-500 text-white py-2 px-4 rounded ml-4">
+        Reset Schedule
+      </button>
+
+      {/* Display error message if professor is booked */}
+      {errorMessage && (
+        <p className="text-red-500 mt-4">
+          {errorMessage}
+        </p>
+      )}
     </div>
   );
 };
